@@ -10,6 +10,7 @@ class User < ApplicationRecord
   validates :email,:username, uniqueness: true
   validates_format_of :email, :with => /@/
   validates :username, length: { maximum: 40 }
+  validates_format_of :username, :with => /\A[\w]+\z/
 
   attr_accessor :password
 
