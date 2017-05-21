@@ -10,6 +10,7 @@ gem 'uglifier'
 gem 'puma', '~> 3.0'
 gem 'jquery-rails'
 gem 'rails-i18n'
+gem 'rails_12factor'
 
 group :production do
   gem 'pg'
