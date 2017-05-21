@@ -6,12 +6,17 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.0.2'
-gem 'sqlite3'
+gem 'uglifier'
 gem 'puma', '~> 3.0'
 gem 'jquery-rails'
 gem 'rails-i18n'
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug', platform: :mri
 end
 
