@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :load_user, except: [:index, :create, :new]
   before_action :authorize_user, except:[:index, :new, :create, :show]
+
   def index
     @users = User.all
   end
@@ -13,13 +14,13 @@ class UsersController < ApplicationController
   def create
     redirect_to root_url, alert: 'Вы уже залогинены' if current_user.present?
     @user = User.new(user_params)
-
     if @user.save
       redirect_to root_url, notice: 'Пользователь успешно зарегистрирован!'
     else
       render 'new'
     end
-  end
+    log_in(@user)
+   end
 
   def edit
   end
@@ -39,6 +40,10 @@ class UsersController < ApplicationController
     @questions_count = @questions.count
     @answers_count = @questions.where.not(answer: nil).count
     @unanswered_count = @questions_count - @answers_count
+  end
+
+  def log_in(user)
+    session[:user_id] = user.id
   end
 
   private
