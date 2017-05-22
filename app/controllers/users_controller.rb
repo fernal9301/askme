@@ -19,8 +19,9 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+    
     log_in(@user)
-   end
+  end
 
   def edit
   end
