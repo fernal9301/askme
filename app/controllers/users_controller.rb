@@ -43,10 +43,6 @@ class UsersController < ApplicationController
     @unanswered_count = @questions_count - @answers_count
   end
 
-  def log_in(user)
-    session[:user_id] = user.id
-  end
-
   private
 
   def authorize_user
