@@ -51,6 +51,10 @@
           <%= f.password_field :password_confirmation, class: 'form-text-field' %>
         </div>
 
+        <div class="form-field">
+          Для удаления аккаунта нажмите на корзину <%= link_to fa_icon('trash-o'), user_path(current_user),
+                                                               method: :delete, data: { confirm: 'Вы действительно хотите удалить аккаунт?' } %>
+        </div>
         <div class="form-action buffer-top">
           <%= f.submit 'Сохранить', class: 'button button-dark button-small' %>
         </div>
