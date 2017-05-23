@@ -15,12 +15,11 @@ class UsersController < ApplicationController
     redirect_to root_url, alert: 'Вы уже залогинены' if current_user.present?
     @user = User.new(user_params)
     if @user.save
+      log_in(@user)
       redirect_to root_url, notice: 'Пользователь успешно зарегистрирован!'
     else
       render 'new'
     end
-    
-    log_in(@user)
   end
 
   def edit
