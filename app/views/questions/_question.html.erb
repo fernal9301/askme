@@ -6,6 +6,14 @@
     <div class="question-text text-lead">
       <%= question.text %>
     </div>
+    
+    <div class="question-text">
+      <% if question.author %>
+        <%= link_to "@#{question.author.username}", user_path(question.author.id)%>
+      <% else %>
+        @Anonymous
+      <% end %>
+    </div>    
 
     <% if question.answer.present? %>
       <div class="question-answer text-lead">
