@@ -17,7 +17,7 @@
         <%# С помощью методов label и text_field у объекта f мы создаем теги %>
         <%# <label ... > и <input type="text" ... > с нужными атрибуами %>
         <div class="form-field">
-          <%= f.label :username, class: 'form-label' %>
+          <%= f.label 'Ваш никнейм', class: 'form-label' %>
           <%= f.text_field :username, class: 'form-text-field' %>
         </div>
 
@@ -42,12 +42,12 @@
         </div>
 
         <div class="form-field">
-          <%= f.label :password, class: 'form-label' %>
+          <%= f.label 'Пароль', class: 'form-label' %>
           <%= f.password_field :password, class: 'form-text-field' %>
         </div>
 
         <div class="form-field">
-          <%= f.label :password_confirmation, class: 'form-label' %>
+          <%= f.label 'Подтверждение пароля', class: 'form-label' %>
           <%= f.password_field :password_confirmation, class: 'form-text-field' %>
         </div>
 

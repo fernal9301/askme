@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    current_user.destroy
+    @user.destroy
     redirect_to root_url, notice: "Аккаунт \@#{@user.username} удалён :("
   end
     
