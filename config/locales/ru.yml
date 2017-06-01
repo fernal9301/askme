@@ -9,3 +9,14 @@ ru:
         avatar_url: 'URL вашей аватарки'
         background_color: 'Цвет фона вокруг аватарки'
          
+  activerecord:
+    models:
+      user: 'Пользователь'
+    attributes:
+      user:
+        name: 'Имя'  
+        username: 'Никнейм'
+        email: 'Email'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+
