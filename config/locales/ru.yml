@@ -11,7 +11,8 @@ ru:
          
   activerecord:
     models:
-      user: 'Пользователь'
+      user: 'пользователь'
+      question: 'вопрос'
     attributes:
       user:
         name: 'Имя'  
@@ -19,4 +20,11 @@ ru:
         email: 'Email'
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
+      question:
+        one: '%{count} вопрос'
+        few: '%{count} вопроса'
+        many: '%{count} вопросов'
+
+        text: 'Ваш вопрос'
+        answer: 'Ответ'
 
