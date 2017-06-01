@@ -1,22 +1,11 @@
 ru:
-  question:
-    one: 'вопрос'
-    few: 'вопросa'
-    many: 'вопросов'
-
-  answer:
-    one: 'ответ'
-    few: 'ответа'
-    many: 'ответов'
-
-  unanswered:
-    one: 'безответный'
-    few: 'безответных'
-    many: 'безответных'
-
-  name: 'Имя'
-  username: 'Ваш никнейм'
-  password: 'Пароль'
-  password_confirmation: 'Подтверждение пароля'
-  avatar_url: 'URL вашей аватарки'
-  background_color: 'Цвет фона вокруг аватарки'
+  helpers:
+    label:
+      user:
+        name: 'Имя'
+        username: 'Ваш никнейм'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        avatar_url: 'URL вашей аватарки'
+        background_color: 'Цвет фона вокруг аватарки'
+         
