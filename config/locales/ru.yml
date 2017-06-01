@@ -8,7 +8,7 @@ ru:
         password_confirmation: 'Подтверждение пароля'
         avatar_url: 'URL вашей аватарки'
         background_color: 'Цвет фона вокруг аватарки'
-         
+
   activerecord:
     models:
       user: 'пользователь'
@@ -21,10 +21,21 @@ ru:
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
       question:
-        one: '%{count} вопрос'
-        few: '%{count} вопроса'
-        many: '%{count} вопросов'
-
         text: 'Ваш вопрос'
         answer: 'Ответ'
 
+  question:
+    one: 'вопрос'
+    few: 'вопроса'
+    many: 'вопросов'
+  
+  answer:
+    one: 'ответ'
+    few: 'ответа'
+    many: 'ответов'
+  
+  unanswered:
+    one: 'безответный'
+    few: 'безответных'
+    many: 'безответных'
+  
