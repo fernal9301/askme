@@ -1,41 +1,28 @@
 ru:
-  helpers:
-    label:
-      user:
-        name: 'Имя'
-        username: 'Ваш никнейм'
-        password: 'Пароль'
-        password_confirmation: 'Подтверждение пароля'
-        avatar_url: 'URL вашей аватарки'
-        background_color: 'Цвет фона вокруг аватарки'
-
   activerecord:
     models:
       user: 'пользователь'
-      question: 'вопрос'
+      question:
+        one: 'вопрос'
+        few: 'вопроса'
+        many: 'вопросов'
     attributes:
       user:
-        name: 'Имя'  
-        username: 'Никнейм'
+        name: 'Имя'
+        username: 'Ваш никнейм'
         email: 'Email'
         password: 'Пароль'
+        avatar_url: 'URL вашей аватарки'
+        background_color: 'Цвет фона вокруг аватарки'
+        password_confirmation: 'Подтверждение пароля'
         password_confirmation: 'Подтверждение пароля'
       question:
-        text: 'Ваш вопрос'
-        answer: 'Ответ'
-
-  question:
-    one: 'вопрос'
-    few: 'вопроса'
-    many: 'вопросов'
-  
-  answer:
-    one: 'ответ'
-    few: 'ответа'
-    many: 'ответов'
-  
+        text: 'Ваш вопрос'      
+        answer:      
+          one: 'ответ'
+          few: 'ответа'
+          many: 'ответов'
   unanswered:
-    one: 'безответный'
-    few: 'безответных'
-    many: 'безответных'
-  
+    one: 'неотвеченный'
+    few: 'неотвеченных'
+    many: 'неотвеченных'
