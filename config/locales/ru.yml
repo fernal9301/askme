@@ -2,10 +2,6 @@ ru:
   activerecord:
     models:
       user: 'пользователь'
-      question:
-        one: 'вопрос'
-        few: 'вопроса'
-        many: 'вопросов'
     attributes:
       user:
         name: 'Имя'
@@ -16,13 +12,16 @@ ru:
         background_color: 'Цвет фона вокруг аватарки'
         password_confirmation: 'Подтверждение пароля'
         password_confirmation: 'Подтверждение пароля'
-      question:
-        text: 'Ваш вопрос'      
-        answer:      
-          one: 'ответ'
-          few: 'ответа'
-          many: 'ответов'
+   
+  answer:      
+    one: 'ответ'
+    few: 'ответа'
+    many: 'ответов'
+  question:
+    one: 'вопрос'
+    few: 'вопроса'
+    many: 'вопросов'
   unanswered:
     one: 'неотвеченный'
     few: 'неотвеченных'
-    many: 'неотвеченных'
+    many: 'неотвеченных'  
