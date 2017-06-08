@@ -7,13 +7,13 @@ class Question < ApplicationRecord
   validates :text, :user, presence: true
   validates :text, length: { maximum: 255 }
 
-
   before_save :set_hashtags
-
 
   private
 
   def set_hashtags
-
+    text.scan(Hashtag::REGEXP).each do |hashtag|
+      hashtags << Hashtag.find_or_create_by(name: hashtag[1..-1])
+    end
   end
 end
