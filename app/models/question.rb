@@ -9,4 +9,11 @@ class Question < ApplicationRecord
 
 
   before_save :set_hashtags
+
+
+  private
+
+  def set_hashtags
+
+  end
 end
