@@ -20,6 +20,10 @@
         <%= question.answer if question.answer.present? %>
       </div>
     <% end %>
+    
+    <div class="buffer-both">
+      <%= question_hashtags(question.hashtags) %>
+    </div>
 
     <div class="question-date">
       <%= l(question.created_at, format: :short) %>
