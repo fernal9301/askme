@@ -12,6 +12,7 @@ class Question < ApplicationRecord
   private
 
   def set_hashtags
+    hashtag_questions.delete_all
     text.scan(Hashtag::REGEXP).each do |hashtag|
       hashtags << Hashtag.find_or_create_by(name: hashtag[1..-1])
     end
