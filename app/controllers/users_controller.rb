@@ -4,8 +4,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @hashtags = Hashtag.all
   end
-  
+
   def new
     redirect_to root_url, alert: 'Вы уже залогинены' if current_user.present?
     @user = User.new
@@ -46,7 +47,7 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to root_url, notice: "Аккаунт \@#{@user.username} удалён :("
   end
-    
+
   private
 
   def authorize_user
