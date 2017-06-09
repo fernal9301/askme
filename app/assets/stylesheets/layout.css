@@ -38,6 +38,10 @@ a {
   padding: 10px;
 }
 
+.content-hashtags {
+  background: #cccccc;
+}
+
 .flash-alert {
   font-size: 20px;
   color: #dc554f;

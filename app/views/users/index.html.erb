@@ -14,10 +14,14 @@
 
 <div class="content-wrapper buffer-both text-center">
   <div class="buffer-both">
-    <h1 class="title-medium">Наши хештеги</h1>
+    <h1 class="title-medium">Хештеги</h1>
   </div>
 
-  <% @hashtags.each do |hashtag| %>
-    <%= link_to hashtag.name, hashtag_path(hashtag) %> 
-  <% end %>
+  <div class="content-hashtags column-1-4-hashtags">
+    <div class="buffer-hashtags title-small">
+      <% @hashtags.each do |hashtag| %>
+        <%= link_to hashtag.name, hashtag_path(hashtag) %> 
+      <% end %>    
+    </div>
+  </div>
 </div>
