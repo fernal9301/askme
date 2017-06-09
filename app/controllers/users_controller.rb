@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, except: [:index, :create, :new]
+  before_action :load_questions, only: [:destroy, :show]
   before_action :authorize_user, except:[:index, :new, :create, :show]
 
   def index
@@ -56,6 +57,10 @@ class UsersController < ApplicationController
 
   def load_user
     @user ||= User.find(params[:id])
+  end
+
+  def load_questions
+    @questions = @user.questions.includes(:hashtags).order(created_at: :desc)
   end
 
   def user_params
