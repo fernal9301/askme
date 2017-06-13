@@ -8,6 +8,7 @@ gem 'rails-i18n'
 gem 'rails_12factor'
 gem 'therubyracer'
 gem 'rspec-rails'
+gem "recaptcha", require: "recaptcha/rails"
 
 group :production do
   gem 'pg'
