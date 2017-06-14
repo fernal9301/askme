@@ -13,7 +13,8 @@ class Question < ApplicationRecord
 
   def set_hashtags
     hashtag_questions.delete_all
-    (text + ' ' + answer.to_s).scan(Hashtag::REGEXP).each do |hashtag|
+    hashtags_unique = (text + ' ' + answer.to_s).scan(Hashtag::REGEXP).uniq
+    hashtags_unique.each do |hashtag|
       hashtags << Hashtag.find_or_create_by(name: hashtag[1..-1])
     end
   end
