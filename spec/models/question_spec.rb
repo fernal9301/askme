@@ -23,4 +23,10 @@ describe Question do
     expect(hashtags.count).to eq 2
     expect(hashtags.pluck(:name).sort).to eq %w(мыла раму)
   end
+
+  it 'checks hashtags unique' do
+    q = FactoryGirl.create(:question, text: 'мама #раму мыла #раму')
+    expect(q.reload.hashtags.count).to eq 1
+    expect(q.hashtags.first.name).to eq 'раму'
+  end
 end
