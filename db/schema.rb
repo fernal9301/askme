@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170608204408) do
+ActiveRecord::Schema.define(version: 20170614195656) do
 
   create_table "hashtag_questions", force: :cascade do |t|
     t.integer  "hashtag_id"
@@ -30,10 +30,11 @@ ActiveRecord::Schema.define(version: 20170608204408) do
   create_table "questions", force: :cascade do |t|
     t.string   "text"
     t.string   "answer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "user_id"
     t.integer  "author_id"
+    t.integer  "lock_version", default: 0
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 

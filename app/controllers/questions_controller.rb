@@ -18,9 +18,14 @@ class QuestionsController < ApplicationController
   end
 
   def update
-    if @question.update(question_params)
-      redirect_to user_path(@question.user), notice: 'Вопрос сохранен'
-    else
+    begin
+      if @question.update(question_params)
+        redirect_to user_path(@question.user), notice: 'Вопрос сохранен'
+      else
+        render :edit
+      end
+    rescue ActiveRecord::StaleObjectError
+      flash[:error] = "Вопрос был изменен пока вы его редактировали"
       render :edit
     end
   end
