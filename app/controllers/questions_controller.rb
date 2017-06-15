@@ -25,8 +25,8 @@ class QuestionsController < ApplicationController
         render :edit
       end
     rescue ActiveRecord::StaleObjectError
-      flash[:error] = "Вопрос был изменен пока вы его редактировали"
-      render :edit
+      flash.now[:alert] = "Вопрос был изменен пока вы его редактировали"
+      render :edit, :status => :conflict
     end
   end
 
@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
 
   def question_params
     if current_user.present? && params[:question][:user_id].to_i == current_user.id
-      params.require(:question).permit(:user_id, :text, :answer)
+      params.require(:question).permit(:user_id, :text, :answer, :lock_version)
     else
       params.require(:question).permit(:user_id, :text)
     end
