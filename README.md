@@ -1,24 +1,11 @@
-# README
+# askme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Клон приложения ASKfm. Написано на rails 5.0.3
 
-Things you may want to cover:
+# демо
+http://yet-another-askme.herokuapp.com/
 
-* Ruby version
 
-* System dependencies
+Поработали с базами данных, rails-console, логами, написали простейшую аутентификацию и авторизацию, прикрутили  капчу - гем recaptcha, научились связям has_many - belongs_to, many-to-many.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###### Учебное приложение в рамках программы интенсива по Ruby on Rails http://goodprogrammer.ru
