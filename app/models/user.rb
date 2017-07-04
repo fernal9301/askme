@@ -1,20 +1,19 @@
 require 'openssl'
 
 class User < ApplicationRecord
+  attr_accessor :password
+
   ITERATIONS = 20000
   DIGEST = OpenSSL::Digest::SHA256.new
 
   has_many :questions, dependent: :destroy
 
-  validates :email,:username, presence: true
-  validates :email,:username, uniqueness: true
-  validates_format_of :email, :with => /@/
+  validates :email, :username, presence: true
+  validates :email, :username, uniqueness: true
+  validates_format_of :email, with: /@/
   validates :username, length: { maximum: 40 }
-  validates_format_of :username, :with => /\A[\w]+\z/
-  validates_format_of :background_color, :with => /\A#[0-9a-fA-F]{6}\z/
-
-  attr_accessor :password
-
+  validates_format_of :username, with: /\A[\w]+\z/
+  validates_format_of :background_color, with: /\A#[0-9a-fA-F]{6}\z/
   validates_presence_of :password, on: :create
   validates_confirmation_of :password
 
