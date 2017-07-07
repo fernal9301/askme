@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
       end
     rescue ActiveRecord::StaleObjectError
       flash.now[:alert] = "Вопрос был изменен пока вы его редактировали"
-      render :edit, :status => :conflict
+      render :edit, status: :conflict
     end
   end
 

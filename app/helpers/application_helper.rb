@@ -7,7 +7,6 @@ module ApplicationHelper
     end
   end
 
-
   def question_hashtags(question)
     question.hashtags.map do |hashtag|
       link_to("##{hashtag.name}", hashtag_path(hashtag))
